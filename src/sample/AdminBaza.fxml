@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="835.0" style="-fx-background-color: #dcdbd6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminBazaController">
+   <children>
+      <AnchorPane prefHeight="59.0" prefWidth="835.0" style="-fx-background-color: #7f8a79;">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" text="User1:" textFill="#dcdbd6">
+               <font>
+                  <Font name="Rockwell" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="userName" layoutX="121.0" layoutY="8.0" text="Standard" textFill="#dcdbd6">
+               <font>
+                  <Font name="Rockwell" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane layoutY="59.0" prefHeight="562.0" prefWidth="835.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="abonentT" text="Abonent">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="abonentTable" layoutX="13.0" layoutY="27.0" prefHeight="194.0" prefWidth="803.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                          <columns>
+                            <TableColumn fx:id="abonentID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="abonentSurname" prefWidth="226.0" text="Abonent Surname" />
+                              <TableColumn fx:id="abonentName" prefWidth="169.0" text="Abonent Name" />
+                              <TableColumn fx:id="abonentPhone" prefWidth="282.0" text="Phone" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="3.0" text="Abonent">
+                           <font>
+                              <Font name="Rockwell" size="19.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addButton" layoutX="761.0" layoutY="237.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteButton" layoutX="762.0" layoutY="272.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="abonentSurnameTF" layoutX="196.0" layoutY="237.0" />
+                        <TextField fx:id="abonentNameTF" layoutX="373.0" layoutY="236.0" />
+                        <TextField fx:id="abonentPhoneTF" layoutX="562.0" layoutY="237.0" />
+                        <Button fx:id="refreshButton" layoutX="655.0" layoutY="272.0" mnemonicParsing="false" text="Refresh" />
+                        <Button fx:id="editAbonentButton" layoutX="562.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                        <TextField fx:id="abonentIdTF" layoutX="13.0" layoutY="236.0" />
+                        <Button fx:id="zaprosAbonentButton" layoutX="196.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Run" />
+                        <ComboBox fx:id="comboAbonent" layoutX="13.0" layoutY="272.0" prefWidth="150.0" />
+                        <Button fx:id="ninthZvitButton" layoutX="694.0" layoutY="311.0" mnemonicParsing="false" text="Generate 9th report" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Worker">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="workerTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="805.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="workerID" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="workerSurname" prefWidth="217.0" text="Worker Surname" />
+                                    <TableColumn fx:id="workerName" prefWidth="171.0" text="Worker Name" />
+                                    <TableColumn fx:id="workerPhone" prefWidth="296.0" text="Phone" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Worker">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="workerAddButton" layoutX="763.0" layoutY="237.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="workerDeleteButton" layoutX="764.0" layoutY="272.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="WorkerSurnameTF" layoutX="196.0" layoutY="237.0" />
+                              <TextField fx:id="workerNameTF" layoutX="384.0" layoutY="237.0" />
+                              <TextField fx:id="workerPhoneTF" layoutX="567.0" layoutY="237.0" />
+                              <Button fx:id="workerRefreshButton" layoutX="567.0" layoutY="272.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="workerEditButton" layoutX="659.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="WorkerIdTF" layoutX="15.0" layoutY="237.0" />
+                              <Button fx:id="zaprosWorkerButton" layoutX="384.0" layoutY="272.0" mnemonicParsing="false" text="Run" />
+                              <ComboBox fx:id="comboWorker" layoutX="15.0" layoutY="272.0" prefWidth="150.0" />
+                              <Button fx:id="seventeenthZvitButton" layoutX="688.0" layoutY="312.0" mnemonicParsing="false" text="Generate 17th report" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Job">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="JobTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="804.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="jobID" prefWidth="78.0" text="ID job" />
+                                    <TableColumn fx:id="JobName" prefWidth="724.0" text="Job Name" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Job">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="JobAddButton" layoutX="680.0" layoutY="238.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="JobDeleteButton" layoutX="762.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="JobNameTF" layoutX="200.0" layoutY="238.0" />
+                              <Button fx:id="JobRefreshButton" layoutX="679.0" layoutY="272.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="JobEditButton" layoutX="760.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="JobIdTF" layoutX="15.0" layoutY="238.0" />
+                              <Button fx:id="zaprosJobButton" layoutX="200.0" layoutY="272.0" mnemonicParsing="false" text="Run" />
+                              <ComboBox fx:id="comboJob" layoutX="15.0" layoutY="272.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Order Type">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="533.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="OrderTypeTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="805.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="orderTypeID" prefWidth="88.0" text="ID Order Type" />
+                                    <TableColumn fx:id="orderTypeName" prefWidth="715.0" text="Order Type Name" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="OrderType">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="OrderTypeAddButton" layoutX="681.0" layoutY="237.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="OrderTypeDeleteButton" layoutX="763.0" layoutY="237.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="OrderTypeNameTF" layoutX="205.0" layoutY="237.0" />
+                              <Button fx:id="OrderTypeRefreshButton" layoutX="680.0" layoutY="271.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="OrderTypeEditButton" layoutX="761.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="OrderTypeIdTF" layoutX="14.0" layoutY="237.0" />
+                              <Button fx:id="thirteenthZvitButton" layoutX="680.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" text="Generate 13th report" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Tariff">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="TariffTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="804.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="TariffID" prefWidth="110.0" text="ID Tariff" />
+                                    <TableColumn fx:id="TariffName" prefWidth="237.0" text="Tariff Name" />
+                                    <TableColumn fx:id="TariffPrice" prefWidth="249.0" text="Tariff Price" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Tariff">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="TariffAddButton" layoutX="683.0" layoutY="238.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="TariffDeleteButton" layoutX="765.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="TariffNameTF" layoutX="193.0" layoutY="238.0" />
+                              <Button fx:id="TariffRefreshButton" layoutX="682.0" layoutY="272.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="TariffEditButton" layoutX="763.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="TariffIdTF" layoutX="13.0" layoutY="238.0" />
+                              <TextField fx:id="TariffPriceTF" layoutX="363.0" layoutY="238.0" />
+                              <Button fx:id="tenthZvitButton" layoutX="683.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" text="Generate 10th report" />
+                              <Button fx:id="zaprosTariffButton" layoutX="14.0" layoutY="310.0" mnemonicParsing="false" text="Contract Count By the Tariff" />
+                              <TextField fx:id="zaprosTariffTF" layoutX="186.0" layoutY="310.0" />
+                              <Label fx:id="zaprosTariffResultLabel" layoutX="350.0" layoutY="314.0" text="Label" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Contract">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="contractTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="805.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="contractID" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="contractName" prefWidth="217.0" text="Contract Name" />
+                                    <TableColumn fx:id="contractAdress" prefWidth="171.0" text="Adress" />
+                                    <TableColumn fx:id="conclusionDate" prefWidth="196.0" text="Conclusion Date" />
+                                    <TableColumn fx:id="contractIdAbonent" prefWidth="75.0" text="ID Abonent" />
+                                    <TableColumn fx:id="contractIdTariff" prefWidth="75.0" text="ID Tariff" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Contract">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="contractAddButton" layoutX="763.0" layoutY="238.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="contractDeleteButton" layoutX="764.0" layoutY="273.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="contractNameTF" layoutX="14.0" layoutY="235.0" />
+                              <TextField fx:id="contractAdressTF" layoutX="178.0" layoutY="235.0" prefHeight="25.0" prefWidth="188.0" />
+                              <TextField fx:id="idAbonentContractTF" layoutX="581.0" layoutY="235.0" prefHeight="25.0" prefWidth="51.0" />
+                              <Button fx:id="contractRefreshButton" layoutX="579.0" layoutY="270.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="contractEditButton" layoutX="667.0" layoutY="270.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="contractIdTF" layoutX="14.0" layoutY="270.0" />
+                              <Button fx:id="zaprosContractButton" layoutX="14.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Run" />
+                              <ComboBox fx:id="comboContract" layoutX="15.0" layoutY="304.0" prefHeight="25.0" prefWidth="149.0" />
+                              <TextField fx:id="abonentSurnameTF1" layoutX="178.0" layoutY="304.0" prefHeight="25.0" prefWidth="190.0" />
+                              <TextField fx:id="abonentNameTF1" layoutX="380.0" layoutY="304.0" prefHeight="25.0" prefWidth="173.0" />
+                              <TextField fx:id="idTariffContractTF" layoutX="668.0" layoutY="235.0" prefHeight="25.0" prefWidth="55.0" />
+                              <DatePicker fx:id="conclusionDateDP" layoutX="380.0" layoutY="235.0" />
+                              <Button fx:id="fourteenthZvitButton" layoutX="669.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Generate 14th report" />
+                              <Button fx:id="eighteenthZvitButton" layoutX="669.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Generate 18th report" />
+                              <DatePicker fx:id="contractZaprosDP1" layoutX="178.0" layoutY="341.0" prefHeight="25.0" prefWidth="189.0" />
+                              <DatePicker fx:id="contractZaprosDP2" layoutX="380.0" layoutY="341.0" prefHeight="25.0" prefWidth="173.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Consumption">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="consumptionTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="805.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="consumptionID" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="consumptionName" maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Consumption Name" />
+                                    <TableColumn fx:id="contractAdress1" maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Adress" />
+                                    <TableColumn fx:id="consumptionAmount" prefWidth="196.0" text="consumption amount" />
+                                    <TableColumn fx:id="consumptionYear" prefWidth="75.0" text="Year" />
+                                    <TableColumn fx:id="consumptionMounth" prefWidth="75.0" text="Mounth" />
+                                    <TableColumn fx:id="consumptionPrice" prefWidth="75.0" text="Price" />
+                                    <TableColumn fx:id="consumptionIdContract" prefWidth="75.0" text="ID Contract" />
+                                    <TableColumn fx:id="consumptionIdTariff" prefWidth="75.0" text="ID Tariff" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Consumption">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="consumptionAddButton" layoutX="763.0" layoutY="238.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="consumptionDeleteButton" layoutX="764.0" layoutY="273.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="consumptionAmountTF" layoutX="14.0" layoutY="235.0" />
+                              <TextField fx:id="consumptionYearTF" layoutX="181.0" layoutY="235.0" />
+                              <TextField fx:id="consumptionMounthTF" layoutX="345.0" layoutY="235.0" />
+                              <Button fx:id="consumptionRefreshButton" layoutX="345.0" layoutY="270.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="consumptionEditButton" layoutX="437.0" layoutY="270.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="consumptionIdTF" layoutX="14.0" layoutY="270.0" />
+                              <Button fx:id="zaprosConsumptionButton" layoutX="345.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Run" />
+                              <ComboBox fx:id="comboConsumption" layoutX="14.0" layoutY="304.0" prefWidth="150.0" />
+                              <TextField fx:id="contractNameTF1" layoutX="181.0" layoutY="304.0" />
+                              <TextField fx:id="consumptionPriceTF" layoutX="516.0" layoutY="238.0" prefHeight="25.0" prefWidth="88.0" />
+                              <TextField fx:id="IdContractConsumptionTF" layoutX="623.0" layoutY="238.0" prefHeight="25.0" prefWidth="53.0" />
+                              <TextField fx:id="IdTariffConsumptionTF" layoutX="690.0" layoutY="238.0" prefHeight="25.0" prefWidth="53.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Worker Job">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="WorkerJobTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="806.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="workerJobID" prefWidth="78.0" text="ID" />
+                                    <TableColumn fx:id="workerIDWorkerJob" prefWidth="214.0" text="ID Worker" />
+                                    <TableColumn fx:id="jobIDWorkerJob" prefWidth="75.0" text="ID Job" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Worker Job">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="WorkerJobAddButton" layoutX="684.0" layoutY="238.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="WorkerJobDeleteButton" layoutX="766.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="workerJobWorkerIdTF" layoutX="177.0" layoutY="238.0" />
+                              <Button fx:id="WorkerJobRefreshButton" layoutX="683.0" layoutY="272.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="WorkerJobEditButton" layoutX="764.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="workerJobIdTF" layoutX="13.0" layoutY="238.0" />
+                              <Button fx:id="zaprosWorkerJobButton" layoutX="177.0" layoutY="272.0" mnemonicParsing="false" text="Run" />
+                              <ComboBox fx:id="comboWorkerJob" layoutX="13.0" layoutY="272.0" prefWidth="150.0" />
+                              <TextField fx:id="workerJobIdJobTF" layoutX="339.0" layoutY="238.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="WorkerOrder">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="WorkerOrderTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="803.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="IDWorkerOrder" prefWidth="78.0" text="ID worker" />
+                                    <TableColumn fx:id="IDAbonentOrderWorkOrd" prefWidth="723.0" text="ID Abonent Order" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Worker Order">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="WorkerOrderAddButton" layoutX="681.0" layoutY="231.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="WorkerOrderDeleteButton" layoutX="763.0" layoutY="231.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="idAbonentOrderTF" layoutX="184.0" layoutY="231.0" />
+                              <Button fx:id="WorkerOrderRefreshButton" layoutX="681.0" layoutY="265.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="WorkerOrderEditButton" layoutX="351.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="idWorkerWorkerOrderTF" layoutX="13.0" layoutY="231.0" />
+                              <Button fx:id="zaprosWorkerOrderButton" layoutX="342.0" layoutY="400.0" mnemonicParsing="false" text="Run" visible="false" />
+                              <ComboBox fx:id="comboWorkerOrder" layoutX="401.0" layoutY="231.0" prefWidth="150.0" />
+                              <TextField fx:id="idAbonentOrderTF1" layoutX="185.0" layoutY="265.0" />
+                              <TextField fx:id="idWorkerWorkerOrderTF1" layoutX="13.0" layoutY="265.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="ContractOrder">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="ContractOrderTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="802.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="IDContractContractOrder" prefWidth="78.0" text="ID contract" />
+                                    <TableColumn fx:id="IDAbonentOrderContractOrder" prefWidth="214.0" text="ID Abonent Order" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Contract Order">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="ContractOrderAddButton" layoutX="680.0" layoutY="231.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="ContractOrderDeleteButton" layoutX="762.0" layoutY="231.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="idAbonentOrderContractOrderTF" layoutX="186.0" layoutY="231.0" />
+                              <Button fx:id="ContractOrderRefreshButton" layoutX="679.0" layoutY="265.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="ContractOrderEditButton" layoutX="351.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="idContractContractOrderTF" layoutX="14.0" layoutY="231.0" />
+                              <Button fx:id="zaprosWorkerOrderButton1" layoutX="342.0" layoutY="400.0" mnemonicParsing="false" text="Run" visible="false" />
+                              <ComboBox fx:id="comboWorkerOrder1" layoutX="14.0" layoutY="400.0" prefWidth="150.0" visible="false" />
+                              <TextField fx:id="idAbonentOrderContractOrderTF1" layoutX="186.0" layoutY="265.0" />
+                              <TextField fx:id="idContractContractOrderTF1" layoutX="14.0" layoutY="265.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Abonent Order">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="534.0" prefWidth="835.0">
+                           <children>
+                              <TableView fx:id="AbonentOrderTable" layoutX="13.0" layoutY="24.0" prefHeight="194.0" prefWidth="805.0" style="-fx-background-color: #dcdbd6; -fx-border-color: #ffff;">
+                                 <columns>
+                                    <TableColumn fx:id="IDAbonentOrderAbonentOrder" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="AbonentOrderPrice" prefWidth="217.0" text="Price" />
+                                    <TableColumn fx:id="AbonentOrderDate" prefWidth="171.0" text="Order Date" />
+                                    <TableColumn fx:id="IDOrderTypeAbonentOrder" prefWidth="296.0" text="ID Order Type" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" text="Abonent Order">
+                                 <font>
+                                    <Font name="Rockwell" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="abonentOrderAddButton" layoutX="763.0" layoutY="231.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: Green;" text="Add">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="abonentOrderDeleteButton" layoutX="764.0" layoutY="266.0" mnemonicParsing="false" style="-fx-background-color: Red;" text="Delete">
+                                 <font>
+                                    <Font name="Rockwell" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="abonentOrderPriceTF" layoutX="178.0" layoutY="231.0" />
+                              <TextField fx:id="IdOrderTypeAbonentOrderTF" layoutX="509.0" layoutY="231.0" />
+                              <Button fx:id="abonentOrderRefreshButton" layoutX="509.0" layoutY="266.0" mnemonicParsing="false" text="Refresh" />
+                              <Button fx:id="abonentOrderEditButton" layoutX="601.0" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Edit" />
+                              <TextField fx:id="AbonentOrderIdAbonentOrderTF" layoutX="15.0" layoutY="231.0" />
+                              <Button fx:id="zaprosAbonentOrderButton" layoutX="15.0" layoutY="304.0" mnemonicParsing="false" text="Run" />
+                              <ComboBox fx:id="comboAbonentOrder" layoutX="14.0" layoutY="266.0" prefWidth="150.0" />
+                              <DatePicker fx:id="orderDateAbonentOrderDP" layoutX="340.0" layoutY="231.0" prefHeight="25.0" prefWidth="157.0" />
+                              <TextField fx:id="zaprosAbonentOrderTF" layoutX="180.0" layoutY="266.0" />
+                              <DatePicker fx:id="abonentZaprosDP1" layoutX="180.0" layoutY="304.0" prefHeight="25.0" prefWidth="149.0" />
+                              <DatePicker fx:id="abonentZaprosDP2" layoutX="343.0" layoutY="304.0" prefHeight="25.0" prefWidth="155.0" />
+                              <Label fx:id="zaprosAbonentOrderResult" layoutX="345.0" layoutY="333.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
