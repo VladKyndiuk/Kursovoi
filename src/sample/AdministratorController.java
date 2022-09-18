@@ -23,6 +23,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javax.swing.*;
 
 public class AdministratorController {
+	
+	@FXML
+    private TextField TestGit;
+	
 
     @FXML
     private ResourceBundle resources;
